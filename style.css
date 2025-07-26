@@ -1,0 +1,85 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f3f3f3;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #f9f9f9;
+  --card-bg: #2a2a2a;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 40px;
+  transition: all 0.3s ease;
+}
+
+.container {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card, .forecast-container {
+  background: var(--bg-color);
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.forecast-day {
+  margin-top: 10px;
+  padding: 10px;
+  background: var(--card-bg);
+  border-radius: 10px;
+}

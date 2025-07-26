@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Weather Test</h1>
+    <button onclick="getWeather()">Get Weather</button>
+    <pre id="output"></pre>
+
+    <script>
+      const API_KEY = 'f394a9e8b0dc3524359838b54f4fb83b';
+      async function getWeather() {
+        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Delhi&appid=${API_KEY}&units=metric`);
+        const data = await res.json();
+        document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+      }
+    </script>
+  </body>
+</html>
